@@ -1,6 +1,12 @@
 # IPC Encryption CPP
 Interprocess Communication to encrypt message using the Vigenere Cypher
 
+## Files
+* `logger.cpp`: The source file of the logger program
+* `encryption.cpp`: The source file of the encryption program
+* `main.cpp`: The source file of the main program (driver)
+* `README.md`: About the project
+
 ## Running instructions
 1. Create a directory for the sources files. 
 ```
