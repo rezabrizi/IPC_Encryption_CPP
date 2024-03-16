@@ -35,7 +35,7 @@ std::string decrypt(const std::string &text, const std::string &key) {
     return decryptedText;
 }
 
-// Add trim function to remove leading spaces
+// removing leading white spaces
 std::string trim(const std::string& str) {
     size_t first = str.find_first_not_of(' ');
     if (std::string::npos == first) {
@@ -45,7 +45,7 @@ std::string trim(const std::string& str) {
     return str.substr(first, (last - first + 1));
 }
 
-// Encryption and decryption functions remain the same
+
 
 int main() {
 
@@ -62,13 +62,13 @@ int main() {
         if (action == "QUIT")
         {
             bQuit = true;
-            std::cout << "RESULT\n";
+            std::cout << "RESULT";
         }
         else if (action == "PASSKEY")
         {
             std::getline(iss, argument);
             pass_key = trim(argument);
-            std::cout << "RESULT\n";
+            std::cout << "RESULT";
         }
         else if (action == "ENCRYPT" || action == "DECRYPT")
         {
