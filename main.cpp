@@ -19,7 +19,7 @@ void set_up_logger(int &logger_fd, const char* log_file_path)
     {
         close(pipefd[1]); // close the write end of the pipe for the logger
         dup2(pipefd[0], STDIN_FILENO); // redirect STDIN to the read end of the pipe
-        execl("./logger.o", "./logger.o", log_file_path, (char *)NULL);
+        execl("./logger", "./logger", log_file_path, (char *)NULL);
         exit(EXIT_FAILURE); // WHAT DOES THIS DO ?
     }
     // Parent Process
@@ -44,7 +44,7 @@ void set_up_encryption(int &encryption_input_fd, int &encryption_output_fd)
 
         close(pipefdOut[0]); // Closing the read end of the output pipe
         dup2(pipefdOut[1], STDOUT_FILENO); // redirect STDOUT to the write end of the output file
-        execl("./encryption.o", "encryption.o", (char *)NULL);
+        execl("./encryption", "encryption", (char *)NULL);
         exit(EXIT_FAILURE);
     }
     else

@@ -1,7 +1,7 @@
 # Ignore C++ executables
-*.exe
-*.out
-*.app
+logger
+main
+encryption
 
 
 cmake-build-debug
