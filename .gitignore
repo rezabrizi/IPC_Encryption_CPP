@@ -3,6 +3,7 @@ logger
 main
 encryption
 
+*.txt
 
 cmake-build-debug
 
